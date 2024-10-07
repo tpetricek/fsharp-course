@@ -29,37 +29,3 @@ let medals =
       match l.Split(';') with 
       | [|g;y;s;d;a;t;n;e;m|] -> { Games=g; Year=int y; Sport=s; Discipline=d; Athlete=a; Team=t; Gender=n; Event=e; Medal=m } 
       | a -> failwithf "failed to read row '%A' from medals.csv!" a ]
-(*      
-#r "nuget: FSharp.Data"
-open FSharp.Data
-
-type Data = FSharp.Data.CsvProvider< @"C:\Tomas\Materials\Teaching\2024\fsharp-course\01-language-basics\medals-raw.csv" >
-
-type Codes = FSharp.Data.HtmlProvider< @"https://raw.githubusercontent.com/the-gamma/thegamma-services/refs/heads/master/data/countrycodes.html" >
-let countries = 
-  [ yield "KOS", "Kosovo"
-    yield "SRB", "Serbia"
-    yield "TTO", "Trinidad and Tobago"
-    for r in Codes.GetSample().Tables.``3-Digit Country Codes``.Rows do 
-      yield r.Code, r.Country.TrimEnd('*') ]  |> dict
-
-let nls=
-  [ for r in Data.GetSample().Rows do
-     let l= 
-      [ r.Games.Substring(0, r.Games.IndexOf('(')-1)
-        string r.Year
-        r.Sport
-        r.Discipline
-        r.Athlete
-        countries.[r.Team]
-        r.Gender
-        r.Event
-        r.Medal
-        ]
-        |> String.concat ";"
-     //if l.Contains(';') then failwith "!"
-     l
-      ]
-
-System.IO.File.WriteAllLines(@"C:\Tomas\Materials\Teaching\2024\fsharp-course\01-language-basics\medals.csv", nls)
-*)

@@ -9,4 +9,5 @@ This will be hands-on, so bring your own computer with F#! Make sure you have an
 
 ## Meetings
 
-* Tuesday 8 October, 10:40 - Language basics, collections and recursion
+* Tuesday 8 October, 10:40 - Language basics and data types
+* Tuesday 22 October, 10:40 - Data types, collections, recursion

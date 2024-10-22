@@ -9,5 +9,6 @@ This will be hands-on, so bring your own computer with F#! Make sure you have an
 
 ## Meetings
 
-* Tuesday 8 October, 10:40 - Language basics and data types
-* Tuesday 22 October, 10:40 - Data types, collections, recursion
+* Past: Tuesday 8 October, 10:40 - Language basics and data types
+* Past: Tuesday 22 October, 10:40 - Data types, collections, recursion
+* Next: Tuesday 5 November, 10:40 - Interactive web applications with Elm architecture (happening despite the CUNI Sports Day)

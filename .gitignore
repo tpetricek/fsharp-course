@@ -1,0 +1,5 @@
+node_modules
+obj
+bin
+*.fs.js
+*.fs.js.map

@@ -9,6 +9,7 @@ This will be hands-on, so bring your own computer with F#! Make sure you have an
 
 ## Meetings
 
-* Past: Tuesday 8 October, 10:40 - Language basics and data types
+* **Next: Tuesday 19 November, 10:40** - Asynchronous programming and server-side development 
+* Past: Tuesday 5 November, 10:40 - Interactive web applications with Elm architecture
 * Past: Tuesday 22 October, 10:40 - Data types, collections, recursion
-* Next: Tuesday 5 November, 10:40 - Interactive web applications with Elm architecture (happening despite the CUNI Sports Day)
+* Past: Tuesday 8 October, 10:40 - Language basics and data types

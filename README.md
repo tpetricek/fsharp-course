@@ -9,7 +9,8 @@ This will be hands-on, so bring your own computer with F#! Make sure you have an
 
 ## Meetings
 
-* **Next: Tuesday 19 November, 10:40** - Asynchronous programming and server-side development 
+* **Next: Tuesday 3 December, 10:40** - Writing asynchronous HTTP servers
+* **Next: Tuesday 19 November, 10:40** - Asynchronous programming and agents
 * Past: Tuesday 5 November, 10:40 - Interactive web applications with Elm architecture
 * Past: Tuesday 22 October, 10:40 - Data types, collections, recursion
 * Past: Tuesday 8 October, 10:40 - Language basics and data types

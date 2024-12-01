@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>F# Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+  <style type="text/css">
+    * { margin:0px; padding:0px; font-family:"Faculty Glyphic", sans-serif;  }
+    body { background:rgb(255, 137, 210); }
+    #page { max-width:600px; height:100vh; margin:0px auto 0px auto; background:rgb(255, 196, 232); padding:40px }
+    #input { margin-top:20px; }
+    #output { background:rgb(255, 223, 243); border:solid 4px rgb(255, 137, 210); margin:20px 0px 20px 0px; padding:10px; }
+    li { margin:0px 0px 5px 20px; }
+    button, input, select { background:rgb(255, 223, 243); border:solid 4px rgb(255, 137, 210); padding:4px 10px; }
+    button { background:rgb(255, 196, 232); }
+    #name { width:100px; }
+    #message { width:200px; }
+    #channel { width:150px; }
+    button { width:80px; cursor:pointer; }
+  </style>
+  <script type="text/javascript">
+
+    async function refresh() {
+      let r = await window.fetch("/content")
+      let content = await r.text()
+      document.getElementById("output").innerHTML = content;
+    }
+
+    function send() {
+      var name = document.getElementById("name").value;
+      var msg = document.getElementById("message").value;
+      var chan = document.getElementById("channel").value;
+      window.fetch("/post/" + encodeURIComponent(chan) + "/" +
+        encodeURIComponent(name), { method:"POST", body:msg })
+    }
+
+    async function load() {
+      let r = await window.fetch("/channels")
+      let content = await r.text()
+      document.getElementById("channel").innerHTML = content;
+    }
+
+    load()
+    setInterval(function () { refresh(); return true; }, 500)
+
+  </script>
+</head>
+<body>
+  <div id="page">
+    <h1>Write your own Discord in F#!</h1>
+    <div id="input">
+    <input type="text" id="name" />
+    <input type="text" id="message" />
+    <select id="channel"></select>    
+    <button onclick="send();">Send</button>
+    </div>
+    <div id="output"></div>
+  </div>
+</body>
+</html>

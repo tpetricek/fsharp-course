@@ -9,7 +9,8 @@ This will be hands-on, so bring your own computer with F#! Make sure you have an
 
 ## Meetings
 
-* **Next: Tuesday 3 December, 10:40** - Writing asynchronous HTTP servers
+* **Current: Tuesday 17 December, 10:40** - Monads and computation expressions
+* Past: Tuesday 3 December, 10:40 - Writing asynchronous HTTP servers
 * Past: Tuesday 19 November, 10:40 - Asynchronous programming and web crawling
 * Past: Tuesday 5 November, 10:40 - Interactive web applications with Elm architecture
 * Past: Tuesday 22 October, 10:40 - Data types, collections, recursion
